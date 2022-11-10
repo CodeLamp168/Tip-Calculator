@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+
+  <img src="./images/logo.svg" alt="logo" class="logo">
+
+  <div class="tip-container mobile desktop">
+
+    <div class="calculation">
+      <div class="calc-section bill-input">
+        <label  for="bill-js">Bill</label>
+        <input class="bill-input" type="number" id="bill-js" placeholder="0"></input>
+      </div>
+      
+      <div class="calc-section btn-section">
+        <label for="percentage">Select Tip %</label>
+        <div class="btn-container">
+          <button class="percentage-btn" id="percentage-js" value='5'>5%</button>
+          <button class="percentage-btn" id="percentage-js" value='10'>10%</button>
+          <button class="percentage-btn" id="percentage-js" value="15">15%</button>
+          <button class="percentage-btn" id="percentage-js" value="25">25%</button>
+          <button class="percentage-btn" id="percentage-js" value="50">50%</button>
+          <input type="number" class="percentage-btn custom-btn" id="custom-percentage-js" placeholder="0"></input>
+        </div>
+      </div>
+     
+      <div class="calc-section number-people">
+        <label for="people-js">Number of People</label>
+        <input class="number-input" id="people-js" type="number" placeholder="0" min-length="1" required>
+      </div>
+
+    </div>
+
+    <div class="amount-total">
+
+      <div class="total-amount-flex">
+        <div class="amount-flex">
+          <p>Tip Amount</p>
+          <small>/ person</small>
+        </div>
+        <h1 class="tip-result" id="amount-js">$0.00</h1>
+      </div>
+
+      <div class="total-amount-flex">
+        <div class="amount-flex">
+          <p>Total</p>
+          <small>/ person</small>
+        </div>
+        <h1 class="tip-result" id="total-js">$0.00</h1>
+      </div>
+
+      <button class="reset-btn" id="reset-js">Reset</button>
+    </div>
+
+  </div>
+  
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Caleb Sim</a>.
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

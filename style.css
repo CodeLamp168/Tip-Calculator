@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+* {
+    box-sizing:border-box;
+}
+
+body {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height:auto;
+    overflow:scroll;
+    background-color: hsl(172, 67%, 45%);
+    font-family:'Space Mono';
+}
+
+.logo {
+    margin:20px;
+}
+
+.tip-container {
+    background-color:hsl(0, 0%, 100%) ;
+    padding:1.5em;
+    border-radius:15px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile {
+    flex-direction:column;
+}
+
+.calc-section {
+    display:flex;
+    flex-direction: column;
+}
+
+.calc-section:nth-child(2) {
+    margin-top:1em;
+}
+
+.calc-section:nth-child(3) {
+    margin-top:1em;
+}
+
+label {
+    color:hsl(184, 14%, 56%);
+}
+
+
+input {
+    padding:10px;
+    border-radius:10px;
+    border:2px solid white;
+    background-color:hsl(189, 41%, 97%);
+    text-align: right;
+    font-size:18px;
+    font-family:inherit;
+    color:hsl(183, 100%, 15%);
+    transition: border 0.2s ease-in;
+}
+
+input[type=number]{
+    -moz-appearance: textfield;
+}
+
+input:focus {
+    border:2px solid hsl(172, 67%, 45%);
+    outline:none;
+}
+
+
+.btn-container {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+.percentage-btn {
+    padding:10px;
+    width:100px;
+    margin:10px;
+    font-family:inherit;
+    font-size:inherit;
+    color:white;
+    background-color:hsl(183, 100%, 15%);
+    border: 3px solid hsl(183, 100%, 15%);
+    border-radius:5px;
+    cursor:pointer;
+    transition: color 0.2s ease-in, background-color 0.2s ease-in, border 0.2s ease-in;
+}
+
+.percentage-btn:hover {
+    
+    color:hsl(183, 100%, 15%);
+    background-color:hsl(172, 75%, 73%);
+    border: 3px solid hsl(172, 75%, 73%);
+}
+
+.percentage-btn.pressed {
+    color:hsl(183, 100%, 15%);
+    background-color:hsl(172, 75%, 73%);
+}
+
+
+.custom-btn {
+    background-color:hsl(189, 41%, 97%);
+    color:hsl(186, 14%, 43%);
+    border:3px solid white;
+    transition: none;
+    cursor:text;
+    transition: border 0.2s ease-in-out;
+}
+
+.custom-btn:focus {
+    border: 3px solid hsl(172, 75%, 73%);
+}
+
+.custom-btn:hover {
+    background-color:hsl(189, 41%, 97%);
+    color:hsl(186, 14%, 43%);
+}
+
+
+
+.amount-total {
+    margin-top:15px;
+    background-color:hsl(183, 100%, 15%);
+    color:white;
+    width:100%;
+    padding:20px 15px;
+    display:flex;
+    flex-direction: column;
+    border-radius:10px;
+}
+
+.total-amount-flex {
+    margin-top:-10px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-amount-flex h1 {
+    color:hsl(172, 67%, 45%)
+}
+
+.amount-flex p {
+    margin-bottom:-2px;
+}
+
+.amount-flex small {
+    color:rgb(160, 156, 156);
+}
+
+.reset-btn {
+    padding:10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: inherit;
+    color:hsl(183, 100%, 15%);
+    background-color:hsl(172, 67%, 45%);
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    transition: background-color 0.2s ease-in;
+}
+
+.reset-btn:hover {
+    background-color: hsl(172, 75%, 73%);
+}
+
+footer {
+    position:absolute;
+    bottom:5px;
+    z-index:-1;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media(min-width:1000px) {
+
+    .desktop {
+        flex-direction: row;
+        justify-content: space-between;
+        min-width:800px;
+        max-width:1000px;
+        height:400px;
+    }
+
+    .calculation {
+        width:550px;
+    }
+
+    input {
+        width:90%;
+    }
+
+
+    .amount-total {
+        margin-top:0;
+        width:60%;
+        max-width:60%;
+        height:350px;
+        padding:2em;
+    }
+
+    .reset-btn {
+        position:relative;
+        top:6em;
+        
+    }
+
+    .btn-container {
+        justify-content:flex-start;
+    }
+
+
+
+}
+
+@media(min-width:1000px) {
+    body {
+        height:100vh;
+    }
+}
